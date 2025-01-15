@@ -146,7 +146,7 @@
 .bottom-header {
   display: grid;
   grid-template-columns: 70% 10% 20%;
-  padding: 15px 20px 15px 30px;
+  padding: 10px 20px 15px 20px;
   column-gap: 20px;
 }
 
@@ -156,7 +156,14 @@
   align-items: center;
   gap: 10px;
 }
-
+.welcome {
+  font-size: 15px;
+  font-weight: bold;
+}
+.user-name{
+    font-size: 25px;
+    font-weight: bold;
+}
 .profile-user-icon {
     width: 70px;
     height: 70px;
@@ -164,3 +171,25 @@
     margin-right: 10px;
 }
 
+.header-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.header-list a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-
+    background-color: rgb(37, 153, 179);
+    border-radius: 15px;
+}
+
+.header-list li {
+    font-size: 15px;
+    font-weight: bold;
+}
