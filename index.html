@@ -1,55 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="sidebar"> <!-- sidebar-->
-            <div class="nav-heading">
-                <img class="dashboard-image" src="/svg-images/dashboard.svg" alt="Dashboard icon"/>Dashboard
+      <div class="sidebar">
+        <!-- sidebar-->
+        <div class="nav-heading">
+          <a href="#"
+            ><img
+              class="dashboard-image"
+              src="/svg-images/dashboard.svg"
+              alt="Dashboard icon"
+            />Dashboard</a
+          >
+        </div>
+        <div class="nav-bar">
+          <ul class="nav-list nav-styles">
+            <li>
+              <a href="#"
+                ><img
+                  src="/svg-images/home.svg"
+                  alt="home icon"
+                  class="icon"
+                />Home</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/card-profile.svg"
+                  alt="profile icon"
+                  class="icon"
+                />Profile</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/message.svg"
+                  alt="message icon"
+                  class="icon"
+                />Message</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/history.svg"
+                  alt="history icon"
+                  class="icon"
+                />History</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/tasks.svg"
+                  alt="tasks icon"
+                  class="icon"
+                />Tasks</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/communities.svg"
+                  alt="communities icon"
+                  class="icon"
+                />Communities</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="settings-bar">
+          <ul class="settings-list nav-styles">
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/settings.svg"
+                  alt="settings icon"
+                  class="icon"
+                />Settings</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/support.svg"
+                  alt="support icon"
+                  class="icon"
+                />Support</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="svg-images/privacy.svg"
+                  alt="privacy icon"
+                  class="icon"
+                />Privacy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end of sidebar -->
+
+      <!-- start of header -->
+       <div class="header">
+        <div class="top-header">
+            <div class="search-bar">
+                <img src="svg-images/search.svg" alt="search icon" class="search-icon">
+                <input type="text" placeholder="" class="search-input">
             </div>
-            <div class="nav-bar">
-                <ul class="nav-list nav-styles">
-                    <li><img src="/svg-images/home.svg" alt="home icon" class="icon">Home</li>
-                    <li><img src="svg-images/card-profile.svg" alt="profile icon" class="icon">Profile</li>
-                    <li><img src="svg-images/message.svg" alt="message icon" class="icon">Message</li>
-                    <li><img src="svg-images/history.svg" alt="history icon" class="icon">History</li>
-                    <li><img src="svg-images/tasks.svg" alt="tasks icon" class="icon">Tasks</li>
-                    <li><img src="svg-images/communities.svg" alt="communities icon" class="icon">Communities</li>
-                </ul>
+            <div class="profile-bar">
+                <img src="svg-images/notifications.svg" alt="notification icon" class="notification-icon">
+                <img src="svg-images/biggie.jpg" alt="profile icon" class="profile-icon">
             </div>
-            <div class="settings-bar">
-                <ul class="settings-list nav-styles">
-                    <li><img src="svg-images/settings.svg" alt="settings icon" class="icon">Settings</li>
-                    <li><img src="svg-images/support.svg" alt="support icon" class="icon">Support</li>
-                    <li><img src="svg-images/privacy.svg" alt="privacy icon" class="icon">Privacy</li>
-                </ul>
+            <div class="profile-name">
+                <p class="name">Biggie Smalls</p>
             </div>
         </div>
-        <!-- end of sidebar -->
-
-        <div class="main-container">
-        <header class="header">
-            <!-- search + user details + 3 buttons + name -->
-             header
-        </header>
-        <div class="main-content">
-            main-content
-            <!-- container1: Projects container2: Announcements container3: Trending-->
-            <!-- grid boxes for each container -->
-        </div>
+        <div class="bottom-header">
+            <div class="user-bar">
+                <img src="svg-images/biggie.jpg" alt="profile icon" class="profile-user-icon">
+                <div class="welcome-user">
+                    <p class="welcome"> Hi there,</p>
+                    <p class="user-name">Biggie Smalls(@BiggieSmalls)</p>
+                </div>
+            </div>
+            
+       </div>
     </div>
-       
-    </div>
-
-</body>
+  </body>
 </html>
-
-
