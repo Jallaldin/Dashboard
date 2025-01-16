@@ -1,14 +1,21 @@
 :root {
   --svg-color: invert(100%) sepia(4%) saturate(15%) hue-rotate(174deg)
     brightness(104%) contrast(100%);
-  --svg-search-color: invert(100%) sepia(4%) saturate(15%) hue-rotate(174deg)
-    brightness(104%) contrast(0%);
+  --svg-search-color: invert(0%) sepia(7%) saturate(7472%) hue-rotate(357deg) brightness(99%) contrast(106%);
 }
 
 * {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hides horizontal scrollbars */
+  width: 100%; /* Ensure body doesn't exceed viewport width */
 }
 
 .container {
@@ -24,6 +31,8 @@
   grid-gap: 35px;
   background-color: rgb(37, 153, 179);
   padding: 25px 50px 25px 20px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .dashboard-image {
@@ -94,11 +103,23 @@
   margin-right: 10px;
 }
 
+.search-icon:hover {
+  cursor: pointer;
+}
+
 .search-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
+.search-bar:hover, .search-bar:hover:active {
+  border-radius: 10px;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+
 
 .search-bar input {
   width: 70%;
@@ -114,6 +135,7 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  margin-left: 50px;
 }
 
 .notification-icon {
@@ -121,6 +143,13 @@
   height: 30px;
   filter: var(--svg-search-color);
   margin-right: 10px;
+}
+
+.notification-icon:hover {
+  /* shake doesn't work in browser */
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
 .profile-icon {
@@ -145,9 +174,10 @@
 
 .bottom-header {
   display: grid;
-  grid-template-columns: 70% 10% 20%;
+  grid-template-columns: 70% 15% 15%;
   padding: 10px 20px 15px 20px;
   column-gap: 20px;
+  box-shadow: 0 2px 4px grey;
 }
 
 .user-bar {
@@ -184,12 +214,146 @@
     color: #fff;
     display: flex;
     align-items: center;
-    padding-
+    padding: 10px 30px 10px 30px;
     background-color: rgb(37, 153, 179);
-    border-radius: 15px;
+    border-radius: 20px;
+}
+
+.header-list a:hover {
+    background-color: rgb(141, 183, 227);
+    color: #fff;
+    transform: scale(1.05);
 }
 
 .header-list li {
     font-size: 15px;
     font-weight: bold;
+}
+
+.main-page {
+  display: grid;
+  grid-area: 2 / 2 / 4 / 4;
+  /* grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto; */
+  grid-template: max-content / 1fr 300px;
+  gap: 20px;
+  padding: 20px;
+  background-color:rgb(227, 245, 248)
+}
+
+.projects-part {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-auto-rows: max-content;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.projects-heading, .announcements-heading, .trending-heading {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  grid-column: 1 / -1;
+  margin: 25px 30px 15px 30px;
+} 
+
+.project-card {
+    background-color: #fff;
+    border-radius: 5px;
+    gap: 10px;
+    box-shadow: 0px 0px 10px grey;
+    padding: 5px 10px 45px 10px;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    margin: 5px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: overflow;
+    border-radius: 5px;
+}
+
+.project-card h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.project-card p {
+  color: rgb(99, 97, 97);
+}
+
+.project-card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.card-icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 15px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.card-icon {
+  width: 25px;
+  height: 25px;
+  filter: var(--svg-search-color);
+}
+.card-icon:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.announcements-part{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.trending-part {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.announcements-part, .trending-part {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
+  padding: 10px;
+  border-radius: 10px;;
+}
+
+.announcement-card, .trending-card {
+  background-color: #fff;
+  border-radius: 5px;
+  gap: 20px 15px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: max-content;
+  width: 100%;
+  /* boxshadow on the bottom and rightside */
+  box-shadow: 10px 10px 10px grey;
+}
+
+.announcement-card:hover, .trending-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.trending-card {
+  grid-template-columns: max-content 1fr;
+  padding: 10px;
+}
+
+.announcement-card p, .trending-card p {
+  color: rgb(99, 97, 97);
+}
+
+.trending-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
